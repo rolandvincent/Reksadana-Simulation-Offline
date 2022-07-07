@@ -1,0 +1,224 @@
+﻿<Window x:Class="Reksadana_Simulation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Reksadana_Simulation"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Reksadana Simulation"
+        Height="695.033"
+        Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical"
+                        Margin="10">
+                <Label FontSize="18" Foreground="Black"
+                       HorizontalAlignment="Center" Name="ptitle">Mandiri Pasar Uang Syariah Ekstra</Label>
+                <Label FontSize="14"
+                       HorizontalAlignment="Center" Foreground="Red">This Application Made By Roland Vincent</Label>
+                <Label FontSize="14">NAB (IDR)</Label>
+                <lvc:CartesianChart Name="Reksadana"
+                                    Height="172"
+                                    VerticalAlignment="Top"
+                                    Margin="10,10,10.333,10"
+                                    Pan="None">
+                </lvc:CartesianChart>
+                <Grid x:Name="x1">
+                    <Label VerticalContentAlignment="Center"
+                           Foreground="Black">Tanggal Mulai</Label>
+                    <DatePicker x:Name="FutureDatePicker"
+                                BorderBrush="Gray"
+                                Foreground="Black"
+                                Width="100"
+                                Margin="100 0 0 0"
+                                HorizontalAlignment="Left"
+                                materialDesign:HintAssist.Hint="Tanggal Mulai"
+                                materialDesign:CalendarAssist.IsHeaderVisible="False"
+                                SelectedDateChanged="FutureDatePicker_SelectedDateChanged">
+                    </DatePicker>
+                    <Button HorizontalAlignment="Left" Margin="230 0 0 0"
+                            Click="Button_Click_3">Ganti Data Grafik</Button>
+                </Grid>
+                <Label  Foreground="Black" FontSize="16"
+                        VerticalContentAlignment="Center" Margin="0 10 0 20"
+                        HorizontalAlignment="Center">Menu Investasi</Label>
+                <Grid x:Name="x2">
+                    <StackPanel Orientation="Horizontal">
+                        <Label VerticalContentAlignment="Center"
+                               Foreground="Black">Tanggal Investasi</Label>
+                        <DatePicker x:Name="TanggalInvest" 
+                                    BorderBrush="Gray"
+                                    Foreground="Black"
+                                    Width="100"
+                                    materialDesign:HintAssist.Hint="Tanggal Investasi"
+                                    materialDesign:CalendarAssist.IsHeaderVisible="False">
+                        </DatePicker>
+                        <Label VerticalContentAlignment="Center"
+                               Foreground="Black"
+                               Margin="50 0 0 0">Nominal</Label>
+                        <TextBox x:Name="Nominal" BorderBrush="Gray"
+                                 Foreground="Black"
+                                 MaxLength="10"
+                                 Width="100"
+                                 HorizontalAlignment="Left"
+                                 materialDesign:HintAssist.Hint="Nominal Uang"
+                                 materialDesign:TransitionAssist.DisableTransitions="True" />
+                        <Button  Margin="30 0 0 0"  Foreground="White"
+                                 Click="Button_Click">Tambah</Button>
+                        <Button  Margin="30 0 0 0" Foreground="White"
+                                 Click="Button_Click_1">Hapus</Button>
+                    </StackPanel>
+                </Grid>
+                <ScrollViewer VerticalAlignment="Stretch"
+                              HorizontalScrollBarVisibility="Auto"
+                              Height="200"
+                              Margin="0 10 0 0">
+                    <ListView x:Name="InvestasiList"
+                              VerticalAlignment="Stretch"
+                              Foreground="Black"
+                              ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                              ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding Tanggal}">
+                                    <GridViewColumn.Header>
+                                        <GridViewColumnHeader Foreground="#444" Padding="8 5 15 5">Tanggal</GridViewColumnHeader>
+                                    </GridViewColumn.Header>
+                                </GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding Investasi}">
+                                    <GridViewColumn.Header>
+                                        <GridViewColumnHeader Foreground="#444" Padding="8 5 15 5">Investasi</GridViewColumnHeader>
+                                    </GridViewColumn.Header>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </ScrollViewer>
+                <Button x:Name="x3"
+                        Click="Button_Click_2"
+                        Foreground="#FFF">Simulate</Button>
+                <ScrollViewer VerticalAlignment="Stretch"
+                              HorizontalScrollBarVisibility="Auto"
+                              Height="500"
+                              Margin="0 10 0 0">
+                    <ListView x:Name="InvestDetailList"
+                              VerticalAlignment="Stretch"
+                              ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                              Foreground="Black"
+                              ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding Tanggal}">
+                                    <GridViewColumn.Header>
+                                        <GridViewColumnHeader Foreground="#444"
+                                                              Padding="8 5 15 5">Tanggal</GridViewColumnHeader>
+                                    </GridViewColumn.Header>
+                                </GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding Investasi}">
+                                    <GridViewColumn.Header>
+                                        <GridViewColumnHeader Foreground="#444"
+                                                              Padding="8 5 15 5">Investasi</GridViewColumnHeader>
+                                    </GridViewColumn.Header>
+                                </GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding NAB}">
+                                    <GridViewColumn.Header>
+                                        <GridViewColumnHeader Foreground="#444"
+                                                              Padding="8 5 15 5">NAB (IDR)</GridViewColumnHeader>
+                                    </GridViewColumn.Header>
+                                </GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding Unit}">
+                                    <GridViewColumn.Header>
+                                        <GridViewColumnHeader Foreground="#444"
+                                                              Padding="8 5 15 5">Unit</GridViewColumnHeader>
+                                    </GridViewColumn.Header>
+                                </GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding JumlahUnit}">
+                                    <GridViewColumn.Header>
+                                        <GridViewColumnHeader Foreground="#444"
+                                                              Padding="8 5 15 5">Jumlah Unit</GridViewColumnHeader>
+                                    </GridViewColumn.Header>
+                                </GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding TotalInvestasi}">
+                                    <GridViewColumn.Header>
+                                        <GridViewColumnHeader Foreground="#444"
+                                                              Padding="8 5 15 5">Total Investasi</GridViewColumnHeader>
+                                    </GridViewColumn.Header>
+                                </GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding TotalInvestasiReturn}">
+                                    <GridViewColumn.Header>
+                                        <GridViewColumnHeader Foreground="#444"
+                                                              Padding="8 5 15 5">Total Investasi + Return</GridViewColumnHeader>
+                                    </GridViewColumn.Header>
+                                </GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding Return}">
+                                    <GridViewColumn.Header>
+                                        <GridViewColumnHeader Foreground="#444"
+                                                              Padding="8 5 15 5">Return</GridViewColumnHeader>
+                                    </GridViewColumn.Header>
+                                </GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding Pertumbuhan}">
+                                    <GridViewColumn.Header>
+                                        <GridViewColumnHeader Foreground="#444"
+                                                              Padding="8 5 15 5">Pertumbuhan</GridViewColumnHeader>
+                                    </GridViewColumn.Header>
+                                </GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding Untung}">
+                                    <GridViewColumn.Header>
+                                        <GridViewColumnHeader Foreground="#444"
+                                                              Padding="8 5 15 5">Keuntungan harian</GridViewColumnHeader>
+                                    </GridViewColumn.Header>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </ScrollViewer>
+                <Label FontSize="20" Content="# Rincian" Foreground="#666"></Label>
+                <Grid>
+                    <Label FontSize="16"
+                           Content="Total Tabung"></Label>
+                    <Label Name="totalTabung"
+                           FontSize="16"
+                           HorizontalAlignment="Right"
+                           Content=""></Label>
+                </Grid>
+                <Grid>
+                    <Label FontSize="16"
+                           Content="Lama Investasi"></Label>
+                    <Label Name="totalHari"
+                           FontSize="16"
+                           HorizontalAlignment="Right"
+                           Content=""></Label>
+                </Grid>
+                <Grid>
+                    <Label FontSize="16"
+                           Content="Total Investasi + Keuntungan"></Label>
+                    <Label Name="totalInvest"
+                           FontSize="16"
+                           HorizontalAlignment="Right"
+                           Content=""></Label>
+                </Grid>
+                <Grid>
+                    <Label FontSize="16"
+                           Content="Total Keuntungan"></Label>
+                    <Label Name="totalKeuntungan"
+                           FontSize="16"
+                           HorizontalAlignment="Right"
+                           Content=""></Label>
+                </Grid>
+                <Grid>
+                    <Label FontSize="16"
+                           Content="Persen Keuntungan"></Label>
+                    <Label Name="totalPersen"
+                           FontSize="16"
+                           HorizontalAlignment="Right"
+                           Content=""></Label>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+        
+
+    </Grid>
+</Window>

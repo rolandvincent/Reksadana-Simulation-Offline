@@ -1,0 +1,30 @@
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\bin\Release\Reksadana Simulation.exe.config
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\bin\Release\Reksadana Simulation.exe
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\bin\Release\Reksadana Simulation.pdb
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\bin\Release\LiveCharts.dll
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\bin\Release\LiveCharts.Wpf.dll
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\bin\Release\MaterialDesignColors.dll
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\bin\Release\MaterialDesignThemes.Wpf.dll
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\bin\Release\Newtonsoft.Json.dll
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\bin\Release\LiveCharts.pdb
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\bin\Release\LiveCharts.xml
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\bin\Release\LiveCharts.Wpf.pdb
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\bin\Release\LiveCharts.Wpf.xml
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\bin\Release\MaterialDesignColors.pdb
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\bin\Release\MaterialDesignThemes.Wpf.pdb
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\bin\Release\MaterialDesignThemes.Wpf.xml
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\bin\Release\Newtonsoft.Json.xml
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\obj\Release\Reksadana Simulation.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\obj\Release\MainWindow.g.cs
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\obj\Release\App.g.cs
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\obj\Release\Reksadana Simulation_MarkupCompile.cache
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\obj\Release\Reksadana Simulation_MarkupCompile.lref
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\obj\Release\App.baml
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\obj\Release\MainWindow.baml
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\obj\Release\Reksadana Simulation.g.resources
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\obj\Release\Reksadana_Simulation.Properties.Resources.resources
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\obj\Release\Reksadana Simulation.csproj.GenerateResource.cache
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\obj\Release\Reksadana Simulation.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\obj\Release\Reksadana Simulation.csproj.CopyComplete
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\obj\Release\Reksadana Simulation.exe
+C:\Users\HP\source\repos\Reksadana Simulation offline\Reksadana Simulation\obj\Release\Reksadana Simulation.pdb
